@@ -1,0 +1,54 @@
+<!--
+Single-file website that displays only a single PNG image.
+Usage:
+ 1) Save this file as `single-image-website.html`.
+ 2) Put your PNG named `image.png` in the same folder (or change the `src` to a remote URL or a different filename).
+ 3) Open the HTML file in a browser (or serve the folder from a web server).
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Single Image</title>
+  <style>
+    /* Reset page so only the image is visible */
+    html, body {
+      height: 100%;
+      margin: 0;
+      background: #000; /* change to #fff if you want white */
+    }
+
+    /* Center the image and make it cover the viewport while preserving aspect ratio */
+    .frame {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    img#single-image {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      display: block;
+      object-fit: contain;
+    }
+
+    /* Hide scrollbars on small overflows (cosmetic) */
+    ::-webkit-scrollbar { width: 0; height: 0; }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <!--
+      Replace `image.png` with a local filename or a remote URL.
+      Example remote URL: https://example.com/picture.png
+    -->
+    <img id="single-image" src="image.png" alt="Single image" />
+  </div>
+</body>
+</html>
