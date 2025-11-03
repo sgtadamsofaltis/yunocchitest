@@ -3,17 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>yunoyunoyunoyunoyuno</title>
+<title>Single Image</title>
 <style>
-/* Reset page so only the image is visible */
+
 html, body {
 height: 100%;
 margin: 0;
-background: #000; /* change to #fff if you want white */
+background: #000; 
 }
 
 
-/* Center the image and make it cover the viewport while preserving aspect ratio */
+
 .frame {
 height: 100%;
 display: flex;
@@ -33,18 +33,15 @@ object-fit: contain;
 }
 
 
-/* Hide scrollbars on small overflows (cosmetic) */
+
 ::-webkit-scrollbar { width: 0; height: 0; }
 </style>
 <link rel="icon" type="image/png" href="favicon.png" />
 </head>
 <body>
 <div class="frame">
-<!--
-Replace `image.png` with a local filename or a remote URL.
-Example remote URL: https://example.com/picture.png
--->
 <img id="single-image" src="image.png" alt="Single image" />
 </div>
+<audio src="song.mp3" autoplay loop></audio>
 </body>
 </html>
